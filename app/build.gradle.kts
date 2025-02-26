@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.dagger.hilt.android")
+    id("com.diffplug.spotless") // Apply Spotless plugin
 }
 
 android {
@@ -64,3 +65,15 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
 
 }
+
+spotless {
+    kotlin {
+        targetExclude("build/**") // Exclude build files
+        ktlint()
+    }
+    java {
+        targetExclude("build/**")
+        googleJavaFormat()
+    }
+}
+

@@ -8,11 +8,15 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.genericapp.R
 import com.example.genericapp.databinding.FragmentFirstBinding
+import com.google.android.material.snackbar.Snackbar
+import com.google.common.util.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment() {
+class FirstFragment : Fragment()
+
+{
 
     private var _binding: FragmentFirstBinding? = null
 
@@ -25,8 +29,10 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
-        return binding.root
+        _binding =
+
+            FragmentFirstBinding.inflate(inflater, container, false)
+        return       binding.root
 
     }
 
